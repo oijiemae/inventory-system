@@ -34,7 +34,7 @@ function decrement (num) {
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   background-color: darkmagenta;
 }
 
