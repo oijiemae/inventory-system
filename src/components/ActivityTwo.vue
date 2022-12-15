@@ -112,7 +112,7 @@
   align-items: center;
   height: 100vh;
 }
-.calculator{
+.calculator {
   background-color: whitesmoke;
   width: 100%;
   max-width: 375px;
@@ -129,6 +129,64 @@
   text-align: right;
   flex: 1 1 0%;
 }
+.display .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+display .input {
+  width: 100%;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.display .operator {
+  color: #EB6666;
+}
+.display .brackets
+.display .percent {
+  color: #26FED7;
+}
+.keys {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(5,1fr);
+  grid-gap: 1rem;
+  box-shadow: 0px -2px 16px rgba(0,0,0,0.2)
+}
+.keys .key {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  height: 0;
+  padding-top: 100%;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  transition: 0.2s;
+  user-select: none;
+}
+.keys key span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+}
 
-
+.keys .key:hover {
+  box-shadow: inset 0px 0px 8px rgba(0,0,0,0.2);
+}
+.keys .key.operator span {
+  color: #EB6666;
+}
+.keys .key.action span {
+  color: #26FED7;
+}
 </style>
