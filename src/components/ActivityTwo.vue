@@ -4,7 +4,7 @@
 
 <template>
   <div>Calculator</div>
-  <body>
+ 
     <div class="app">
       
       <div class="display">
@@ -19,10 +19,17 @@
       <div data-key="clear" class="key action">
         <span>AC</span>
       </div>
-      
+
+      <div data-key="+-" class="key action">
+        <span>+/-</span>
+      </div>
+
+      <div data-key="%" class="keyaction">
+        <span>%</span>
+      </div>
     </div>
 
-  </body>
+ 
 </template>
 
 <style></style>
