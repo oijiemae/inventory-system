@@ -1,30 +1,28 @@
 <script setup>
-import { ref } from "vue";
-let number = ref(0);
-let number2 = ref(0);
 
-let result = ref(0);
-
-function add() {
-  result.value = parseInt(number.value) + parseInt(number2.value);
-}
-
-function subtract() {
-  result.value = parseInt(number.value) - parseInt(number2.value);
-}
 </script>
 
 <template>
   <div>Calculator</div>
-  <input type="text" v-model="number" />
-  <input type="text" v-model="number2" />
+  <body>
+    <div class="app">
+      
+      <div class="display">
+        <div class="content">
+          <div class="input"></div>
+          <div class="output"></div>
+        </div>
+      </div>
 
-  <div>
-    <button @click="add">+</button>
-    <button @click="subtract">-</button>
-  </div>
+    </div>
+    <div class="keys">
+      <div data-key="clear" class="key action">
+        <span>AC</span>
+      </div>
+      
+    </div>
 
-  <div>Total: {{ result }}</div>
+  </body>
 </template>
 
 <style></style>
