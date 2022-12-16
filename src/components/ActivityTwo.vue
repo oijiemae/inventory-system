@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+
 const keys = document.querySelectorAll('.key');
 const display_input = document.querySelector('.display .input');
 const display_output = document.querySelector('.display .output');
@@ -12,15 +12,15 @@ for (let key of keys) {
 	key.addEventListener('click', () => {
 		if (value == "clear") {
 			input = "";
-			display_input.innerHTML = "";
-			display_output.innerHTML = "";
+			display_input.inner = "";
+			display_output.inner = "";
 		} else if (value == "backspace") {
 			input = input.slice(0, -1);
-			display_input.innerHTML = CleanInput(input);
+			display_input.inner = CleanInput(input);
 		} else if (value == "=") {
 			let result = eval(PerpareInput(input));
 
-			display_output.innerHTML = CleanOutput(result);
+			display_output.inners = CleanOutput(result);
 		} else if (value == "brackets") {
 			if (
 				input.indexOf("+") == -1 || 
@@ -39,11 +39,11 @@ for (let key of keys) {
 				input += "-";
 			}
 
-			display_input.innerHTML = CleanInput(input);
+			display_input.inner = CleanInput(input);
 		} else {
 			if (ValidateInput(value)) {
 				input += value;
-				display_input.innerHTML = CleanInput(input);
+				display_input.inner = CleanInput(input);
 			}
 		}
 	})
@@ -125,7 +125,6 @@ function PerpareInput (input) {
 
 	return input_array.join("");
 }
-
 </script>
 
 <template>
@@ -240,7 +239,7 @@ function PerpareInput (input) {
 }
 
 .calculator {
-	background-color: whitesmoke;
+	background-color: white;
 	width: 100%;
 	max-width: 375px;
 	min-height: 640px;
@@ -293,7 +292,7 @@ function PerpareInput (input) {
 }
 
 .keys {
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.925);
 	padding: 1.5rem;
 	border-radius: 1.5rem 1.5rem 0 0;
 	display: grid;
