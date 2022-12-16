@@ -110,17 +110,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
 }
 .calculator {
   background-color: whitesmoke;
   width: 100%;
-  max-width: 375px;
-  min-height: 640px;
+  max-width: 100px;
+  min-height: 100px;
   display: flex;
 }
 .display{
-  min-height: 200px;
+  min-height: 50px;
   padding: 1.5rem;
   display: flex;
   justify-content: flex-end;
@@ -133,12 +133,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 100%;
-  max-width: 100%;
+  width: 50%;
+  max-width: 50%;
   overflow: auto;
 }
-display .input {
-  width: 100%;
+.display .input {
+  width: 50%;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
@@ -170,7 +170,7 @@ display .input {
   transition: 0.2s;
   user-select: none;
 }
-.keys key span {
+.keys .key span {
   position: absolute;
   top: 50%;
   left: 50%;
