@@ -1,5 +1,5 @@
 <script setup>
-
+import { ref } from "vue";
 const keys = document.querySelectorAll('.key');
 const display_input = document.querySelector('.display .input');
 const display_output = document.querySelector('.display .output');
@@ -230,18 +230,13 @@ function PerpareInput (input) {
 </div>
 </template>
 
-<style>* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: sans-serif;
-}
-
+<style>
 .app {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	font-family: sans-serif;
 }
 
 .calculator {
